@@ -1,13 +1,16 @@
 {
   "parser": "@typescript-eslint/parser",
-  "parserOptions": {
+    "parserOptions": {
     "ecmaFeatures": {
       "jsx": true,
       "useJSXTextNode": true
     },
     "ecmaVersion": 2018,
     "sourceType": "module",
-    "project": "./tsconfig.json"
+      "project": [
+        "./tsconfig.json",
+        "../api/tsconfig.json"
+      ]
   },
   "extends": [
     "airbnb-typescript",
@@ -39,7 +42,9 @@
           "**/*.stories.*",
           "**/.storybook/**/*.*",
           "**/.jest-canvas-mock/**/*.*",
-          "**/*.d.ts"
+          "**/*.d.ts",
+          "**/__tests__/**",
+          "**/?(*.)+(spec|test).[tj]s?(x)"
         ],
         "peerDependencies": true
       }

@@ -58,7 +58,6 @@ const handleResponse = async <T>(func: () => Promise<T>): Promise<T> => {
   }
 };
 
-
 const getAuthorizationHeader = () => {
   const accessToken = getAccessToken();
   if (accessToken) {

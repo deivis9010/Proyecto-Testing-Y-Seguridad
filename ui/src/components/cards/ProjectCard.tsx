@@ -14,7 +14,6 @@ interface ProjectCardProps {
   captionText?: string;
 }
 
-
 const ProjectCard = (props: ProjectCardProps) => {
   const { project } = props;
   const { user } = useAuth();
